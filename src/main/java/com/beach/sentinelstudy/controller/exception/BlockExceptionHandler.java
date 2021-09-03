@@ -13,4 +13,9 @@ public class BlockExceptionHandler {
         return new CommonResponse(
                 "response time override limit and service stop, please wait 60s", 400);
     }
+
+    public static CommonResponse errorHandlerForFlowRefuse(BlockException ex) {
+        return new CommonResponse(
+                "the service requests has reached limit and service stop, please wait 60s", 400);
+    }
 }
